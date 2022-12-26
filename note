@@ -1,0 +1,66 @@
+### initiating project
+
+mkdir server
+cd server
+npm i -g nodemon
+npm i express body-parser bcrypt cors dotenv gridfs-stream multer multer-gridfs-storage helmet morgan jsonwebtoken mongoose
+npm install multer@1.4.4 //multer dependency issue with gridfs-storage
+
+npm init -y
+
+### Configurations
+
+# mongodb config
+mongodb user : instaclone  ,  instaclone
+MONGO_URL = 'mongodb+srv://instaclone:<password>@cluster0.wtqpfdh.mongodb.net/?retryWrites=true&w=majority'
+PORT=3001
+
+//always have to add the ip of server to the mongoose
+
+# configurations
+index.js
+imports 
+Configure middlewear and other packages
+Configure file storage
+Configure Mongoose
+
+# first run
+node index.js
+
+### Organizing Data
+
+# Decide on dataModels (looking) at mocks
+ MongoDb : little bit freeform, still need to organize data
+
+### Tackle authentication
+
+Create User,js // create mongo schema then User model
+
+auth.js :  
+
+# register
+http://127.0.0.1:3001/auth/register working with postman
+{
+    "firstName":"Dumindu",
+    "lastName":"Karunarathna",
+    "email":"dumindudtk@gmail.com",
+    "password":"abcd1234",
+    "picturePath":"none",
+    "friends":[],
+    "location":"Colombo",
+    "occupation":"Software Engineer"
+}
+
+# login
+http://127.0.0.1:3001/auth/login   working token recieved
+{
+    "email":"dumindudtk@gmail.com",
+    "password":"abcd1234"
+}
+
+
+
+
+
+
+
